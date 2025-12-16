@@ -1,0 +1,10 @@
+NO ./textures/wolfen_stein/red_brick.xpm
+SO ./textures/left.xpm
+WE ./textures/wolfen_stein/grey_stone.xpm
+EA ./textures/matrix.xpm
+C 100,50,50
+F 0,100,0
+
+111
+111
+111

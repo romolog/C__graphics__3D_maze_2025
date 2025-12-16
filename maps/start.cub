@@ -1,0 +1,13 @@
+NO ./textures/wolfen_stein/blue_stone.xpm
+SO ./textures/wolfen_stein/red_brick.xpm
+WE ./textures/wolfen_stein/purple_stone.xpm
+EA ./textures/wolfen_stein/red_brick.xpm
+C 100,50,50
+F 0,100,0
+
+111111111111111
+100000000000001
+100000000000001
+1000000N0000001
+100000000000001
+111111111111111

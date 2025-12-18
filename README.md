@@ -1,9 +1,10 @@
 # 3D Maze
 
-That is my graphic project written in **C** for **Linux (Ubuntu)**.<br/>
-It renders a 3D view of a maze and allows real-time navigation from a first-person perspective.
+This is my graphics project written in **C** for **Linux (Ubuntu)**.  
+It renders a **3D view of a maze** and allows **real-time navigation from a first-person perspective**.
 
-I implemented from scratch ray-casting algorithms. The resulting rendering I made using **MiniLibX** library.
+I implemented the **ray-casting algorithm from scratch**, and the rendering is handled using the **MiniLibX** library.
+
 
 ---
 

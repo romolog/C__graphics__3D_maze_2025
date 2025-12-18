@@ -1,4 +1,4 @@
-#### 3D Maze
+# 3D Maze
 
 That is a graphic project written in C language for Linux (Ubuntu) - first person view going through a maze.
 Graphic library used is MiniLibX (https://github.com/42paris/minilibx-linux).
@@ -10,7 +10,7 @@ Graphic library used is MiniLibX (https://github.com/42paris/minilibx-linux).
 - arrow-left - turn left
 - arrow-right - turn right
 
-## Deployment prerequisits
+### Deployment prerequisits
 
 - Linux (Ubuntu)
 - gcc
@@ -22,7 +22,7 @@ Graphic library used is MiniLibX (https://github.com/42paris/minilibx-linux).
 To install necessary packages to Ubuntu run: 
 <br>&emsp;&emsp;$ sudo apt-get install gcc make xorg libxext-dev libbsd-dev
 
-## Build and Launch
+### Build and Launch
 
 - copy repo 
 - in Shell go to the folder and run:

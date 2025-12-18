@@ -29,7 +29,7 @@ D       Move right
 - XShm
 - libbsd-dev
 
-You may install required dependencies with: 
+You may install the required dependencies with: 
 ```bash
 sudo apt-get install gcc make xorg libxext-dev libbsd-dev;
 ```

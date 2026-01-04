@@ -92,6 +92,10 @@ define LIB_CLEAN =
 $(MAKE) -C $(1) clean
 endef
 
+define LIB_FCLEAN =
+$(MAKE) -C $(1) fclean
+endef
+
 LIB_LIBFT = $(addprefix $(LIB_DIR_LIBFT), libft.a)
 LIB_MLX	= $(addprefix $(LIB_DIR_MLX), libmlx_Linux.a)
 LIBS = $(LIB_LIBFT) $(LIB_MLX)
@@ -144,6 +148,7 @@ clean:
 fclean: clean
 	@$(RM) $(NAME) ./debug/$(NAME)
 	@$(RM) ./build ./debug ./deps
+	@$(foreach dir, $(LIB_DIRS), $(call $(LIB_FCLEAN), dir))
 
 .PHONY: re
 re: fclean all

@@ -80,12 +80,12 @@ $(NAME):	$(OBJS) Makefile
 
 .PHONY: clean
 clean:
-	@rm -f $(OBJS)
-	@rm -f *h.gch
+	@rm -rf $(OBJS)
+	@rm -rf *h.gch
 
 .PHONY: fclean
 fclean: clean
-	@rm -f $(NAME)
+	@rm -rf $(NAME)
 
 .PHONY: re
 re: fclean all

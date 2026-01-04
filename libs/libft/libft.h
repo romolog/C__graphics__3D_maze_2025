@@ -90,4 +90,6 @@ t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int		ft_lstsize(t_list *lst);
 
+void	ft_write(int fdout, char *str, size_t len);
+
 #endif

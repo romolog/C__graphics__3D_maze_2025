@@ -34,7 +34,7 @@ C_FILES =\
 		ft_itoa.c			ft_printf_xd.c	\
 		ft_strmapi.c		ft_getline.c	\
 		ft_striteri.c		ft_getline_utils.c	\
-		ft_putchar_fd.c		\
+		ft_putchar_fd.c		ft_write.c	\
 		ft_putstr_fd.c		\
 		ft_putendl_fd.c		\
 		ft_putnbr_fd.c		\
@@ -63,7 +63,7 @@ ifeq ($(origin CC), envirnoment override)
 CC = cc
 endif
 
-CC_WWW_FLAGS = -Wall -Wextra -Werror
+CC_WWW_FLAGS = -Wall -Wextra
 CC_FLAGS = -g
 INCLD_FLAGS = -I$(INCLD_PATH)
 

@@ -36,14 +36,14 @@ void	ft_check_args(int argc, char **argv, t_tr *t)
 		if (i > 0 && !ft_strncmp((ptr + i), ".cub", 5))
 			return ;
 	}
-	(void)write(2, "Error\n", 6);
-	(void)write(2, YELLOW_BOLD_HIGH, ft_strlen(YELLOW_BOLD_HIGH));
-	(void)write(2, t->prog, ft_strlen(t->prog));
-	(void)write(2, ": ", 2);
-	(void)write(2, YELLOW_NORM, ft_strlen(YELLOW_NORM));
+	ft_write(2, "Error\n", 6);
+	ft_write(2, YELLOW_BOLD_HIGH, ft_strlen(YELLOW_BOLD_HIGH));
+	ft_write(2, t->prog, ft_strlen(t->prog));
+	ft_write(2, ": ", 2);
+	ft_write(2, YELLOW_NORM, ft_strlen(YELLOW_NORM));
 	msg = "error arg: requires one arg: map file *?.cub\n";
-	(void)write(2, msg, ft_strlen(msg));
-	(void)write(2, DEFAULT_COLOR, ft_strlen(DEFAULT_COLOR));
+	ft_write(2, msg, ft_strlen(msg));
+	ft_write(2, DEFAULT_COLOR, ft_strlen(DEFAULT_COLOR));
 	exit(EXIT_FAILURE);
 }
 
@@ -54,23 +54,23 @@ void	ft_err(int condition, t_tr *t, char *file_name, int line)
 		t->err = NULL;
 		return ;
 	}
-	(void) write(2, "Error\n", 6);
+	ft_write(2, "Error\n", 6);
 	if (DEBUG_MODE)
 	{
-		(void) write(2, YELLOW_NORM, ft_strlen(YELLOW_NORM));
+		ft_write(2, YELLOW_NORM, ft_strlen(YELLOW_NORM));
 		(void) ft_printf("%s : line %d : errno %d : ", file_name, line, errno);
 	}
-	(void) write(2, YELLOW_BOLD_HIGH, ft_strlen(YELLOW_BOLD_HIGH));
-	(void) write(2, t->prog, ft_strlen(t->prog));
-	(void) write(2, ": ", 2);
-	(void) write(2, YELLOW_NORM, ft_strlen(YELLOW_NORM));
-	(void) write(2, t->err, ft_strlen(t->err));
+	ft_write(2, YELLOW_BOLD_HIGH, ft_strlen(YELLOW_BOLD_HIGH));
+	ft_write(2, t->prog, ft_strlen(t->prog));
+	ft_write(2, ": ", 2);
+	ft_write(2, YELLOW_NORM, ft_strlen(YELLOW_NORM));
+	ft_write(2, t->err, ft_strlen(t->err));
 	if (!t->err)
 	{
-		(void) write(2, strerror(errno), ft_strlen(strerror(errno)));
-		(void) write(2, "\n", 1);
+		ft_write(2, strerror(errno), ft_strlen(strerror(errno)));
+		ft_write(2, "\n", 1);
 	}
-	(void) write(2, DEFAULT_COLOR, ft_strlen(DEFAULT_COLOR));
+	ft_write(2, DEFAULT_COLOR, ft_strlen(DEFAULT_COLOR));
 	t->exit = 1;
 	t->exit_status = EXIT_FAILURE;
 	ft_cleanup(t);

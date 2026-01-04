@@ -64,18 +64,18 @@ void	ft_transform_rawmap_to_arr2d(t_tr *t)
 	{
 		i = -1;
 		while (++i < (t->map_cols + 7))
-			(void) write(1, "-", 1);
-		(void) write(1, "\n", 1);
+			ft_write(1, "-", 1);
+		ft_write(1, "\n", 1);
 		i = -1;
 		while (++i < t->map_rows)
 			(void) printf("%2d : |%s|\n", i, t->f_map[i]);
 		i = -1;
 		while (++i < (t->map_cols + 7))
-			(void) write(1, "-", 1);
+			ft_write(1, "-", 1);
 		(void) printf("\nline length = %d\n", t->map_cols);
 		i = -1;
 		while (++i < (t->map_cols + 7))
-			(void) write(1, "-", 1);
-		(void) write(1, "\n", 1);
+			ft_write(1, "-", 1);
+		ft_write(1, "\n", 1);
 	}
 }

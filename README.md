@@ -40,6 +40,7 @@ sudo apt-get install gcc make xorg libxext-dev libbsd-dev;
 ```bash
 git clone https://github.com/romolog/C__graphics__3D_maze_2025 3D_maze;
 cd 3D_maze;
+make;
 ```
 ---
 

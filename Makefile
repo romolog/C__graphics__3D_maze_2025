@@ -85,16 +85,10 @@ DEPS_DIR = ./deps/
 DEPS = $(addprefix $(DEPS_DIR), $(CSRC:.c=.d))
 NODEPS = clean fclean bonus
 
-LIB_DIR_LIBFT = ./libs/libft/
-LIB_DIR_MLX = ./libs/mlx42_paris/
-LIB_DIRS = $(LIB_DIR_LIBFT) $(LIB_DIR_MLX)
-define LIB_CLEAN =
-$(MAKE) -C $(1) clean
-endef
+LIB_DIR_LIBFT := ./libs/libft/
+LIB_DIR_MLX := ./libs/mlx42_paris/
+LIB_DIRS := $(LIB_DIR_LIBFT) $(LIB_DIR_MLX)
 
-define LIB_FCLEAN =
-$(MAKE) -C $(1) fclean
-endef
 
 LIB_LIBFT = $(addprefix $(LIB_DIR_LIBFT), libft.a)
 LIB_MLX	= $(addprefix $(LIB_DIR_MLX), libmlx_Linux.a)
@@ -142,13 +136,16 @@ $(LIB_MLX):
 .PHONY: clean
 clean:
 	@$(RM) $(addprefix ./build/, $(CSRC:.c=.o)) $(addprefix ./debug/, $(CSRC:.c=.o)) $(DEPS)
-	@$(foreach dir, $(LIB_DIRS), $(call $(LIB_CLEAN), dir))
+# 	@$(foreach dir, $(LIB_DIRS), $(MAKE) -C $(dir) clean)
+	$(MAKE) -C ./libs/libft clean
+	$(MAKE) -C ./libs/mlx42_paris clean
 
 .PHONY: fclean
 fclean: clean
 	@$(RM) $(NAME) ./debug/$(NAME)
 	@$(RM) ./build ./debug ./deps
-	@$(foreach dir, $(LIB_DIRS), $(call $(LIB_FCLEAN), dir))
+	$(MAKE) -C ./libs/libft fclean
+
 
 .PHONY: re
 re: fclean all

@@ -36,14 +36,14 @@ void	ft_check_args(int argc, char **argv, t_tr *t)
 		if (i > 0 && !ft_strncmp((ptr + i), ".cub", 5))
 			return ;
 	}
-	(void) write(2, "Error\n", 6);
-	(void) write(2, YELLOW_BOLD_HIGH, ft_strlen(YELLOW_BOLD_HIGH));
-	(void) write(2, t->prog, ft_strlen(t->prog));
-	(void) write(2, ": ", 2);
-	(void) write(2, YELLOW_NORM, ft_strlen(YELLOW_NORM));
+	(void)write(2, "Error\n", 6);
+	(void)write(2, YELLOW_BOLD_HIGH, ft_strlen(YELLOW_BOLD_HIGH));
+	(void)write(2, t->prog, ft_strlen(t->prog));
+	(void)write(2, ": ", 2);
+	(void)write(2, YELLOW_NORM, ft_strlen(YELLOW_NORM));
 	msg = "error arg: requires one arg: map file *?.cub\n";
-	(void) write(2, msg, ft_strlen(msg));
-	(void) write(2, DEFAULT_COLOR, ft_strlen(DEFAULT_COLOR));
+	(void)write(2, msg, ft_strlen(msg));
+	(void)write(2, DEFAULT_COLOR, ft_strlen(DEFAULT_COLOR));
 	exit(EXIT_FAILURE);
 }
 
